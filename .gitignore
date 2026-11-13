@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Node
+node_modules/
+dist/
+
+# Local data and secrets
+.env
+.env.*
+!.env.example
+data/
+*.parquet
+
+# Tool and OS files
+.DS_Store
+Thumbs.db
