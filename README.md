@@ -19,6 +19,25 @@ frontend/  React + TypeScript application
 infra/     Monitoring configuration
 ```
 
+## Running locally
+
+Requires Docker, [uv](https://docs.astral.sh/uv/), and the
+[LinkedIn job postings dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
+with `postings.csv` saved under `data/raw/`.
+
+```bash
+cp .env.example .env
+docker compose up -d postgres
+uv sync
+uv run alembic -c backend/alembic.ini upgrade head
+uv run etl/load.py            # prints row counts for each cleaning/dedup step
+uv run pytest
+```
+
+`etl/load.py` keeps internships and entry-level roles, plus a deterministic 5% sample of
+other postings (`--background-rate`) to serve as negatives during evaluation. Re-running it
+is safe: postings already in the database are skipped by `content_hash`.
+
 ## Development workflow
 
 1. Create a focused branch from `main`.
