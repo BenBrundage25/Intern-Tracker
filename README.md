@@ -21,18 +21,19 @@ infra/     Monitoring configuration
 
 ## Running locally
 
-Requires Docker, [uv](https://docs.astral.sh/uv/), and the
+Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) with WSL
+integration enabled, and save `postings.csv` from the
 [LinkedIn job postings dataset](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
-with `postings.csv` saved under `data/raw/`.
+under `data/raw/`. Then:
 
 ```bash
-cp .env.example .env
-docker compose up -d postgres
-uv sync
-uv run alembic -c backend/alembic.ini upgrade head
-uv run etl/load.py            # prints row counts for each cleaning/dedup step
-uv run pytest
+make setup   # installs uv, Node 22, Ollama + model, Python deps, .env; starts and migrates Postgres
+make load    # prints row counts for each cleaning/dedup step
+make check   # lint + tests
+make help    # every command
 ```
+
+`make setup` is safe to re-run. It skips anything already installed.
 
 `etl/load.py` keeps internships and entry-level roles, plus a deterministic 5% sample of
 other postings (`--background-rate`) to serve as negatives during evaluation. Re-running it
