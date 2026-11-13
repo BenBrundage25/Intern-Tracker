@@ -1,6 +1,6 @@
 # Decisions
 
-This log records choices, evidence, and tradeoffs for the Job Matcher project.
+This log records choices, evidence, and tradeoffs for the Internship Tracker project.
 It is intentionally part of the repository: explaining why a system was built
 this way is as important as explaining what it does.
 

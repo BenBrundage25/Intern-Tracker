@@ -1,6 +1,6 @@
-# Job Matcher
+# Internship Tracker
 
-Job Matcher ranks internship postings against a resume using hybrid search, structured skill extraction, and a fine-tuned reranker.
+Internship Tracker ranks internship postings against a resume using hybrid search, structured skill extraction, and a fine-tuned reranker.
 
 ## Project goals
 
