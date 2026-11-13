@@ -1,0 +1,7 @@
+job_id,company_name,title,description,max_salary,location,formatted_experience_level,listed_time,job_posting_url
+101,Acme,Software Engineering Intern,"<p>Build services in <b>Python</b> &amp; SQL.</p><ul><li>Docker</li><li>Git</li></ul>",,"Austin, TX",Internship,1713397508000.0,https://example.com/101
+102,Acme,Software Engineering Intern,"<div>Build services in Python &amp; SQL.</div>  <p>Docker</p><p>Git</p>",,"Austin, TX",Internship,1713397600000.0,https://example.com/102
+103,Globex,Data Analyst,"Entry-level role analysing sales data with Excel and Tableau.",,Remote,Entry level,1713400000000.0,https://example.com/103
+104,Initech,Senior Staff Engineer,"Lead distributed systems design.",,"New York, NY",Mid-Senior level,1713400000000.0,https://example.com/104
+105,Umbrella,Junior Web Developer,"React, TypeScript, and CSS.",,"Chicago, IL",,1713500000000.0,https://example.com/105
+106,Hooli,Marketing Intern,,,"Palo Alto, CA",Internship,1713500000000.0,https://example.com/106
