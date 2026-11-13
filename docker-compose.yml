@@ -2,9 +2,9 @@ services:
   postgres:
     image: pgvector/pgvector:pg16
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-jobmatcher}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-jobmatcher}
-      POSTGRES_DB: ${POSTGRES_DB:-jobmatcher}
+      POSTGRES_USER: ${POSTGRES_USER:-interntracker}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-interntracker}
+      POSTGRES_DB: ${POSTGRES_DB:-interntracker}
     ports:
       - "${POSTGRES_PORT:-5432}:5432"
     volumes:

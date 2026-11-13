@@ -12,15 +12,15 @@ jobs:
       postgres:
         image: pgvector/pgvector:pg16
         env:
-          POSTGRES_USER: jobmatcher
-          POSTGRES_PASSWORD: jobmatcher
-          POSTGRES_DB: jobmatcher
+          POSTGRES_USER: interntracker
+          POSTGRES_PASSWORD: interntracker
+          POSTGRES_DB: interntracker
         ports: ["5432:5432"]
         options: >-
-          --health-cmd "pg_isready -U jobmatcher"
+          --health-cmd "pg_isready -U interntracker"
           --health-interval 5s --health-timeout 3s --health-retries 10
     env:
-      DATABASE_URL: postgresql+psycopg://jobmatcher:jobmatcher@localhost:5432/jobmatcher
+      DATABASE_URL: postgresql+psycopg://interntracker:interntracker@localhost:5432/interntracker
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v6

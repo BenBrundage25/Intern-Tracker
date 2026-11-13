@@ -1,6 +1,6 @@
 import os
 
-DEFAULT_DATABASE_URL = "postgresql+psycopg://jobmatcher:jobmatcher@localhost:5432/jobmatcher"
+DEFAULT_DATABASE_URL = "postgresql+psycopg://interntracker:interntracker@localhost:5432/interntracker"
 
 
 def database_url() -> str:
